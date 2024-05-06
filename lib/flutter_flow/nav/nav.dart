@@ -87,16 +87,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => const SignInWidget(),
             ),
             FFRoute(
-              name: 'forgotPassword',
-              path: 'forgotPassword',
-              builder: (context, params) => const ForgotPasswordWidget(),
-            ),
-            FFRoute(
-              name: 'phoneVerify',
-              path: 'phoneVerify',
-              builder: (context, params) => const PhoneVerifyWidget(),
-            ),
-            FFRoute(
               name: 'homePage',
               path: 'homePage',
               builder: (context, params) => params.isEmpty
@@ -104,18 +94,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : const HomePageWidget(),
             ),
             FFRoute(
-              name: 'profilePage',
-              path: 'profilePage',
+              name: 'elections',
+              path: 'elections',
               builder: (context, params) => params.isEmpty
-                  ? const NavBarPage(initialPage: 'profilePage')
-                  : const ProfilePageWidget(),
+                  ? const NavBarPage(initialPage: 'elections')
+                  : const ElectionsWidget(),
             ),
             FFRoute(
-              name: 'courses',
-              path: 'courses',
+              name: 'users',
+              path: 'users',
               builder: (context, params) => params.isEmpty
-                  ? const NavBarPage(initialPage: 'courses')
-                  : const CoursesWidget(),
+                  ? const NavBarPage(initialPage: 'users')
+                  : const UsersWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

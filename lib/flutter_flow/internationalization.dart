@@ -144,61 +144,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // forgotPassword
-  {
-    '0li8667y': {
-      'tr': 'Forgot Password',
-      'en': '',
-    },
-    'g30fi9gh': {
-      'tr': 'Forgot Password',
-      'en': '',
-    },
-    'linkhb3l': {
-      'tr':
-          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
-      'en': '',
-    },
-    'bwxk8lim': {
-      'tr': 'Your email',
-      'en': '',
-    },
-    '2z0oiai0': {
-      'tr': 'Enter your email to recieve a linke...',
-      'en': '',
-    },
-    '0ypp9jzq': {
-      'tr': 'Send Reset Link',
-      'en': '',
-    },
-    '15udw37i': {
-      'tr': 'Home',
-      'en': '',
-    },
-  },
-  // phoneVerify
-  {
-    'qvfo4iku': {
-      'tr': 'Confirm your Code',
-      'en': '',
-    },
-    'g3z0s5iz': {
-      'tr': 'Confirm your Code',
-      'en': '',
-    },
-    'ysuael9k': {
-      'tr': 'This code helps keep your account safe and secure.',
-      'en': '',
-    },
-    'yc9rm3xe': {
-      'tr': 'Confirm & Continue',
-      'en': '',
-    },
-    'kpke021w': {
-      'tr': 'Home',
-      'en': '',
-    },
-  },
   // homePage
   {
     '2th408k2': {
@@ -270,62 +215,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // profilePage
-  {
-    'gvic0agz': {
-      'tr': 'Profile',
-      'en': '',
-    },
-    '2za7cp4i': {
-      'tr': 'Below you will find a summary of your courses',
-      'en': '',
-    },
-    'b91u5zvh': {
-      'tr': 'Edit',
-      'en': '',
-    },
-    'ofirytgk': {
-      'tr': 'Account',
-      'en': '',
-    },
-    '0ugpk174': {
-      'tr': 'Switch to Dark Mode',
-      'en': '',
-    },
-    'mztuxvdc': {
-      'tr': 'Switch to Light Mode',
-      'en': '',
-    },
-    'c0rehy65': {
-      'tr': 'Country',
-      'en': '',
-    },
-    'ypjboksd': {
-      'tr': 'Edit Profile',
-      'en': '',
-    },
-    'sbupgj5y': {
-      'tr': 'General',
-      'en': '',
-    },
-    'c53qb9y4': {
-      'tr': 'Support',
-      'en': '',
-    },
-    'gim7t1nl': {
-      'tr': 'Terms of Service',
-      'en': '',
-    },
-    'ia75xbtp': {
-      'tr': 'Invite Friends',
-      'en': '',
-    },
-    'nao4zuj3': {
-      'tr': '•',
-      'en': '',
-    },
-  },
-  // courses
+  // elections
   {
     'amtpdf0q': {
       'tr': 'Your Courses',
@@ -372,6 +262,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // users
+  {
+    '09o2u7l4': {
+      'tr': 'Your Courses',
+      'en': '',
+    },
+    '90uhff29': {
+      'tr': 'Below you will find a summary of your courses.',
+      'en': '',
+    },
+    'oczm45ot': {
+      'tr': 'Add Course',
+      'en': '',
+    },
+    '4t50ql5q': {
+      'tr': 'Your Top Classes',
+      'en': '',
+    },
+    'co2bw7rn': {
+      'tr': 'No-Code Platform Design',
+      'en': '',
+    },
+    '0bxv0t7c': {
+      'tr': '12 Projects',
+      'en': '',
+    },
+    'mecrbrqs': {
+      'tr': '21 students',
+      'en': '',
+    },
+    'tawjt00o': {
+      'tr': 'Code for no-coders',
+      'en': '',
+    },
+    '6kuosj2x': {
+      'tr': '12 Projects',
+      'en': '',
+    },
+    '51subkc0': {
+      'tr': '16 students',
+      'en': '',
+    },
+    'du2uiezw': {
+      'tr': '•',
+      'en': '',
+    },
+  },
   // sideBarNav
   {
     'mygsiguk': {
@@ -383,11 +320,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'r19qzkrd': {
-      'tr': 'Courses',
+      'tr': 'Elections',
       'en': '',
     },
-    'iv629bxb': {
-      'tr': 'Profile',
+    'hwpwn78q': {
+      'tr': 'Users',
       'en': '',
     },
   },

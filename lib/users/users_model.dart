@@ -1,9 +1,9 @@
 import '/components/side_bar_nav_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'profile_page_widget.dart' show ProfilePageWidget;
+import 'users_widget.dart' show UsersWidget;
 import 'package:flutter/material.dart';
 
-class ProfilePageModel extends FlutterFlowModel<ProfilePageWidget> {
+class UsersModel extends FlutterFlowModel<UsersWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

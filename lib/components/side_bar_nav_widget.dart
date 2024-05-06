@@ -169,11 +169,11 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget> {
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                        child: widget.twoIcon!,
+                        child: widget.oneIcon!,
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'r19qzkrd' /* Courses */,
+                          'r19qzkrd' /* Elections */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily:
@@ -191,57 +191,37 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget> {
             ),
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
-              child: InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed(
-                    'profilePage',
-                    extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
-                        hasTransition: true,
-                        transitionType: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 0),
+              child: Container(
+                width: double.infinity,
+                height: 48.0,
+                decoration: BoxDecoration(
+                  color: widget.twoBG,
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 4.0, 4.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                        child: widget.oneIcon!,
                       ),
-                    },
-                  );
-                },
-                child: Container(
-                  width: double.infinity,
-                  height: 48.0,
-                  decoration: BoxDecoration(
-                    color: widget.threeColor,
-                    borderRadius: BorderRadius.circular(12.0),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 4.0, 4.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 12.0, 0.0),
-                          child: widget.threeIcon!,
+                      Text(
+                        FFLocalizations.of(context).getText(
+                          'hwpwn78q' /* Users */,
                         ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'iv629bxb' /* Profile */,
-                          ),
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyMediumFamily,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyMediumFamily),
-                              ),
-                        ),
-                      ],
-                    ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).bodyMediumFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
+                            ),
+                      ),
+                    ],
                   ),
                 ),
               ),

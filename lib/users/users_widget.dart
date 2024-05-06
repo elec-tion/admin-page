@@ -7,19 +7,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'courses_model.dart';
-export 'courses_model.dart';
+import 'users_model.dart';
+export 'users_model.dart';
 
-class CoursesWidget extends StatefulWidget {
-  const CoursesWidget({super.key});
+class UsersWidget extends StatefulWidget {
+  const UsersWidget({super.key});
 
   @override
-  State<CoursesWidget> createState() => _CoursesWidgetState();
+  State<UsersWidget> createState() => _UsersWidgetState();
 }
 
-class _CoursesWidgetState extends State<CoursesWidget>
+class _UsersWidgetState extends State<UsersWidget>
     with TickerProviderStateMixin {
-  late CoursesModel _model;
+  late UsersModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -28,7 +28,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CoursesModel());
+    _model = createModel(context, () => UsersModel());
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation1': AnimationInfo(
@@ -209,7 +209,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'amtpdf0q' /* Your Courses */,
+                                                      '09o2u7l4' /* Your Courses */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -237,7 +237,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '29btn8pw' /* Below you will find a summary ... */,
+                                                        '90uhff29' /* Below you will find a summary ... */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -267,7 +267,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'tkpd3m6j' /* Add Course */,
+                                              'oczm45ot' /* Add Course */,
                                             ),
                                             icon: const Icon(
                                               Icons.add_rounded,
@@ -319,7 +319,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                       16.0, 16.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'mi31k3q8' /* Your Top Classes */,
+                                      '4t50ql5q' /* Your Top Classes */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .titleSmall
@@ -442,7 +442,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'lhkwui1s' /* No-Code Platform Design */,
+                                                              'co2bw7rn' /* No-Code Platform Design */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -469,7 +469,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'wfunamg9' /* 12 Projects */,
+                                                              '0bxv0t7c' /* 12 Projects */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -605,7 +605,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'k54nmhw1' /* 21 students */,
+                                                              'mecrbrqs' /* 21 students */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -755,7 +755,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'bmiclelw' /* Code for no-coders */,
+                                                              'tawjt00o' /* Code for no-coders */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -787,7 +787,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'vsrqyvzy' /* 12 Projects */,
+                                                                  '6kuosj2x' /* 12 Projects */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -925,7 +925,7 @@ class _CoursesWidgetState extends State<CoursesWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'ncsw5mdp' /* 16 students */,
+                                                              '51subkc0' /* 16 students */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)

@@ -1,9 +1,9 @@
 import '/components/side_bar_nav_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'courses_widget.dart' show CoursesWidget;
+import 'elections_widget.dart' show ElectionsWidget;
 import 'package:flutter/material.dart';
 
-class CoursesModel extends FlutterFlowModel<CoursesWidget> {
+class ElectionsModel extends FlutterFlowModel<ElectionsWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

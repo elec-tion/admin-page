@@ -124,8 +124,8 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage': const HomePageWidget(),
-      'profilePage': const ProfilePageWidget(),
-      'courses': const CoursesWidget(),
+      'elections': const ElectionsWidget(),
+      'users': const UsersWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -162,11 +162,11 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             BottomNavigationBarItem(
               icon: const Icon(
-                Icons.account_circle_outlined,
+                Icons.school_outlined,
                 size: 24.0,
               ),
               label: FFLocalizations.of(context).getText(
-                'nao4zuj3' /* • */,
+                '8enu9wk8' /* • */,
               ),
               tooltip: '',
             ),
@@ -176,7 +176,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 24.0,
               ),
               label: FFLocalizations.of(context).getText(
-                '8enu9wk8' /* • */,
+                'du2uiezw' /* • */,
               ),
               tooltip: '',
             )

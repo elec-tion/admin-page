@@ -116,11 +116,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '5goowcap': {
-      'tr': 'Email Address',
+      'tr': 'ID',
       'en': '',
     },
     'sjzomt9g': {
-      'tr': 'Enter your email here...',
+      'tr': 'Enter your ID here...',
       'en': '',
     },
     'x7hacm36': {
@@ -128,7 +128,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'vr644k8h': {
-      'tr': 'Enter your email here...',
+      'tr': 'Enter your password here...',
       'en': '',
     },
     'o1ik1s8l': {
@@ -139,344 +139,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Sign In',
       'en': '',
     },
-    'iui8vk35': {
-      'tr': 'Use a social platform to continue',
-      'en': '',
-    },
-    'kf187pts': {
-      'tr': 'Don\'t have an account?',
-      'en': '',
-    },
-    'y4c79vnl': {
-      'tr': 'Create Account',
-      'en': '',
-    },
-    'fjo4dpba': {
-      'tr': 'Continue as Guest',
-      'en': '',
-    },
     'gykm7wwb': {
-      'tr': 'Home',
-      'en': '',
-    },
-  },
-  // signUp
-  {
-    'rm9hx72d': {
-      'tr': 'Get Started',
-      'en': '',
-    },
-    '24gxp3q6': {
-      'tr': 'Create an account by using the form below.',
-      'en': '',
-    },
-    'hn9kib7r': {
-      'tr': 'Email Address',
-      'en': '',
-    },
-    '36e52du9': {
-      'tr': 'Enter your email here...',
-      'en': '',
-    },
-    'v78zfsqz': {
-      'tr': 'Password',
-      'en': '',
-    },
-    'gs79l7ef': {
-      'tr': 'Enter your email here...',
-      'en': '',
-    },
-    'kwxpblip': {
-      'tr': 'Sign Up',
-      'en': '',
-    },
-    'k511gwxh': {
-      'tr': 'Use a social platform to continue',
-      'en': '',
-    },
-    '91e5sm94': {
-      'tr': 'Already have an account?',
-      'en': '',
-    },
-    'nn88um63': {
-      'tr': 'Login',
-      'en': '',
-    },
-    'ctxn4flb': {
-      'tr': 'Continue as Guest',
-      'en': '',
-    },
-    '8f2njf4r': {
-      'tr': 'Home',
-      'en': '',
-    },
-  },
-  // createProfile
-  {
-    'yi11ywsu': {
-      'tr': 'Create Profile',
-      'en': '',
-    },
-    '2f24llzu': {
-      'tr': 'Your Name',
-      'en': '',
-    },
-    'wr1zyvk7': {
-      'tr': 'Your City',
-      'en': '',
-    },
-    '9nk8ex1e': {
-      'tr': 'State',
-      'en': '',
-    },
-    'xjjl4fgl': {
-      'tr': 'State',
-      'en': '',
-    },
-    'f3lcxe2o': {
-      'tr': 'Alabama',
-      'en': '',
-    },
-    'n92rq7fa': {
-      'tr': 'Alaska',
-      'en': '',
-    },
-    '8pml5cj7': {
-      'tr': 'Arizona',
-      'en': '',
-    },
-    'fvuhspw4': {
-      'tr': 'Arkansas',
-      'en': '',
-    },
-    'g3lwb2cl': {
-      'tr': 'California',
-      'en': '',
-    },
-    'v7j8y5gf': {
-      'tr': 'Colorado',
-      'en': '',
-    },
-    '7fhw92vq': {
-      'tr': 'Connecticut',
-      'en': '',
-    },
-    'y4m1euj6': {
-      'tr': 'Delaware',
-      'en': '',
-    },
-    'nmgboper': {
-      'tr': 'Florida',
-      'en': '',
-    },
-    'hycmmcym': {
-      'tr': 'Georgia',
-      'en': '',
-    },
-    '1fahi99t': {
-      'tr': 'Hawaii',
-      'en': '',
-    },
-    'miw6o5os': {
-      'tr': 'Idaho',
-      'en': '',
-    },
-    'jrnkrzaa': {
-      'tr': 'Illinoi',
-      'en': '',
-    },
-    'geewr1lp': {
-      'tr': 'Indiana',
-      'en': '',
-    },
-    '89a1b7xu': {
-      'tr': 'Iowa',
-      'en': '',
-    },
-    'sdflua3j': {
-      'tr': 'Kansas',
-      'en': '',
-    },
-    'esa4wi7d': {
-      'tr': 'Kentucky',
-      'en': '',
-    },
-    'h6t8o63c': {
-      'tr': 'Louisiana',
-      'en': '',
-    },
-    'vdg0ka1o': {
-      'tr': 'Maine',
-      'en': '',
-    },
-    'ybut440h': {
-      'tr': 'Maryland',
-      'en': '',
-    },
-    'b2qzbwq4': {
-      'tr': 'Massachusetts',
-      'en': '',
-    },
-    'my5bxeqj': {
-      'tr': 'Michigan',
-      'en': '',
-    },
-    'a0csbwpe': {
-      'tr': 'Minnesota',
-      'en': '',
-    },
-    'cosr708r': {
-      'tr': 'Mississippi',
-      'en': '',
-    },
-    '68quxn5f': {
-      'tr': 'Missouri',
-      'en': '',
-    },
-    'gf1z5jor': {
-      'tr': 'Monta',
-      'en': '',
-    },
-    '5iotdox1': {
-      'tr': 'Nebraska',
-      'en': '',
-    },
-    '4fz9f66u': {
-      'tr': 'Nevada',
-      'en': '',
-    },
-    'vrgjn9oe': {
-      'tr': 'New Hampshire',
-      'en': '',
-    },
-    'h9i2z1be': {
-      'tr': 'New Jersey',
-      'en': '',
-    },
-    'xhms5w89': {
-      'tr': 'New Mexico',
-      'en': '',
-    },
-    'cilh53xu': {
-      'tr': 'New York',
-      'en': '',
-    },
-    'lo25dl8k': {
-      'tr': 'North Carolina',
-      'en': '',
-    },
-    '1cam34fe': {
-      'tr': 'North Dak',
-      'en': '',
-    },
-    'cmz0mb8k': {
-      'tr': 'Ohio',
-      'en': '',
-    },
-    'pkfw92u1': {
-      'tr': 'Oklahoma',
-      'en': '',
-    },
-    'a0gsdec5': {
-      'tr': 'Oregon',
-      'en': '',
-    },
-    'rsi85tgb': {
-      'tr': 'Pennsylvani',
-      'en': '',
-    },
-    '4hsov8jk': {
-      'tr': 'Rhode Island',
-      'en': '',
-    },
-    '3o5svbd8': {
-      'tr': 'South Caroli',
-      'en': '',
-    },
-    '8qa8ncea': {
-      'tr': 'South Dakota',
-      'en': '',
-    },
-    'kkcamuey': {
-      'tr': 'Tennessee',
-      'en': '',
-    },
-    'd5wwtc8k': {
-      'tr': 'Texas',
-      'en': '',
-    },
-    'rmucos5v': {
-      'tr': 'Utah',
-      'en': '',
-    },
-    'vvb8gk34': {
-      'tr': 'Vermont',
-      'en': '',
-    },
-    'jsbmvb77': {
-      'tr': 'Virginia',
-      'en': '',
-    },
-    'p9cyrt6z': {
-      'tr': 'Washingto',
-      'en': '',
-    },
-    'rwpf2axh': {
-      'tr': 'West Virginia',
-      'en': '',
-    },
-    '0surcqto': {
-      'tr': 'Wisconsin',
-      'en': '',
-    },
-    'rzna4065': {
-      'tr': 'Wyoming',
-      'en': '',
-    },
-    'miy4ydnd': {
-      'tr': 'Select State',
-      'en': '',
-    },
-    'yhingadd': {
-      'tr': 'Your bio',
-      'en': '',
-    },
-    '1sp337lt': {
-      'tr': 'Save Changes',
-      'en': '',
-    },
-    '6cb5f7s9': {
-      'tr': 'Create Profile',
-      'en': '',
-    },
-  },
-  // phoneSignIn
-  {
-    'tphbvtky': {
-      'tr': 'Phone Sign In',
-      'en': '',
-    },
-    '6fm3t5h9': {
-      'tr': 'Phone Sign In',
-      'en': '',
-    },
-    'mt49lj74': {
-      'tr': 'Type in your phone number below to register.',
-      'en': '',
-    },
-    'jaa14b46': {
-      'tr': 'Your Phone Number',
-      'en': '',
-    },
-    'baaz8cvm': {
-      'tr': 'Please enter a valid number...',
-      'en': '',
-    },
-    't50wdnmj': {
-      'tr': 'Sign In with Phone',
-      'en': '',
-    },
-    't9bd3p2m': {
       'tr': 'Home',
       'en': '',
     },
@@ -546,222 +209,63 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'tr': 'Your project status is appearing here.',
       'en': '',
     },
-    '7whn4u0v': {
-      'tr': 'Course Summary',
-      'en': '',
-    },
-    'qdvza20j': {
-      'tr': 'An overview of your courses.',
-      'en': '',
-    },
-    'r1wo3pyn': {
-      'tr': '23%',
-      'en': '',
-    },
-    '8jpbemi8': {
-      'tr': 'Course Progress',
-      'en': '',
-    },
-    'eywnv1eb': {
-      'tr': '93%',
-      'en': '',
-    },
-    '42h4czpc': {
-      'tr': 'Course Grade',
-      'en': '',
-    },
-    '7ex8jt8w': {
-      'tr': 'Active Users',
-      'en': '',
-    },
-    '0gapj32p': {
-      'tr': 'A small summary of your users base',
-      'en': '',
-    },
     'o9mkucxv': {
       'tr': 'Total User Count',
       'en': '',
     },
-    '1kr6mz9u': {
-      'tr': 'An overview of all your users on your platform.',
+    '8okodhrd': {
+      'tr': 'Total Election Count',
       'en': '',
     },
-    'm2ylxnqr': {
-      'tr': '56.4k',
+    'mlkvilsn': {
+      'tr': 'Total Candidates Count',
       'en': '',
     },
-    'i5sayknh': {
-      'tr': 'Active Users',
+    'rgun29oo': {
+      'tr': 'Total x Count',
       'en': '',
     },
-    'u905u5z4': {
-      'tr': 'A small summary of your users base',
+    'yzb0bx6c': {
+      'tr': '31',
       'en': '',
     },
-    'zn6lmsyy': {
-      'tr': 'Total User Count',
+    'fbspwxn5': {
+      'tr': 'Elections',
       'en': '',
     },
-    'giwo5cwm': {
-      'tr': 'An overview of all your users on your platform.',
+    'jad2d0o2': {
+      'tr': 'Election Name',
       'en': '',
     },
-    'ajb0vrqg': {
-      'tr': '56.4k',
+    'fewd278m': {
+      'tr': 'Start Date',
       'en': '',
     },
-    'td4odtx2': {
-      'tr': 'My Users',
+    'nx1rwc49': {
+      'tr': 'End Date',
       'en': '',
     },
-    'l7h231qe': {
-      'tr': 'Member Name',
+    'g1sxqbr0': {
+      'tr': 'District',
       'en': '',
     },
-    'vemoh92n': {
-      'tr': 'Email',
-      'en': '',
-    },
-    'ixq49d1q': {
-      'tr': 'Last Active',
-      'en': '',
-    },
-    'kwqbcbuf': {
-      'tr': 'Date Created',
-      'en': '',
-    },
-    'eo7te9h8': {
+    'r9eccyxl': {
       'tr': 'Status',
       'en': '',
     },
-    'h207hhgd': {
-      'tr': 'Custom Name',
+    'wfdbqljh': {
+      'tr': 'Not Started',
       'en': '',
     },
-    'qb1swbfb': {
-      'tr': 'user@domainname.com',
+    'x6j4dmvb': {
+      'tr': 'Started',
       'en': '',
     },
-    'e0d98zex': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'tf55hb6m': {
-      'tr': 'Active',
-      'en': '',
-    },
-    'oq9jf5dv': {
-      'tr': 'Custom Name',
-      'en': '',
-    },
-    'ne96hx7r': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'a5rck25t': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'wbdx11gl': {
-      'tr': 'Active',
-      'en': '',
-    },
-    '1p31pbvt': {
-      'tr': 'Custom Name',
-      'en': '',
-    },
-    'a45scol3': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'ynpxg5yv': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'qmdjg72n': {
-      'tr': 'Active',
-      'en': '',
-    },
-    'ixuvax6s': {
-      'tr': 'Custom Name',
-      'en': '',
-    },
-    '8qzchcq4': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'jo87j4tc': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    '0xmw4r72': {
-      'tr': 'Active',
-      'en': '',
-    },
-    'vwqwtifr': {
-      'tr': 'Custom Name',
-      'en': '',
-    },
-    'z58yaxrh': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'q6yj2udf': {
-      'tr': 'user@domainname.com',
-      'en': '',
-    },
-    'jb00wqic': {
-      'tr': 'Active',
+    'wv9vj84s': {
+      'tr': 'Finished',
       'en': '',
     },
     'er4lh3yy': {
-      'tr': '•',
-      'en': '',
-    },
-  },
-  // courses
-  {
-    'amtpdf0q': {
-      'tr': 'Your Courses',
-      'en': '',
-    },
-    '29btn8pw': {
-      'tr': 'Below you will find a summary of your courses.',
-      'en': '',
-    },
-    'tkpd3m6j': {
-      'tr': 'Add Course',
-      'en': '',
-    },
-    'mi31k3q8': {
-      'tr': 'Your Top Classes',
-      'en': '',
-    },
-    'lhkwui1s': {
-      'tr': 'No-Code Platform Design',
-      'en': '',
-    },
-    'wfunamg9': {
-      'tr': '12 Projects',
-      'en': '',
-    },
-    'k54nmhw1': {
-      'tr': '21 students',
-      'en': '',
-    },
-    'bmiclelw': {
-      'tr': 'Code for no-coders',
-      'en': '',
-    },
-    'vsrqyvzy': {
-      'tr': '12 Projects',
-      'en': '',
-    },
-    'ncsw5mdp': {
-      'tr': '16 students',
-      'en': '',
-    },
-    '8enu9wk8': {
       'tr': '•',
       'en': '',
     },
@@ -817,6 +321,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'nao4zuj3': {
+      'tr': '•',
+      'en': '',
+    },
+  },
+  // courses
+  {
+    'amtpdf0q': {
+      'tr': 'Your Courses',
+      'en': '',
+    },
+    '29btn8pw': {
+      'tr': 'Below you will find a summary of your courses.',
+      'en': '',
+    },
+    'tkpd3m6j': {
+      'tr': 'Add Course',
+      'en': '',
+    },
+    'mi31k3q8': {
+      'tr': 'Your Top Classes',
+      'en': '',
+    },
+    'lhkwui1s': {
+      'tr': 'No-Code Platform Design',
+      'en': '',
+    },
+    'wfunamg9': {
+      'tr': '12 Projects',
+      'en': '',
+    },
+    'k54nmhw1': {
+      'tr': '21 students',
+      'en': '',
+    },
+    'bmiclelw': {
+      'tr': 'Code for no-coders',
+      'en': '',
+    },
+    'vsrqyvzy': {
+      'tr': '12 Projects',
+      'en': '',
+    },
+    'ncsw5mdp': {
+      'tr': '16 students',
+      'en': '',
+    },
+    '8enu9wk8': {
       'tr': '•',
       'en': '',
     },

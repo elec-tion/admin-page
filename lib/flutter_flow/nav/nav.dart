@@ -87,21 +87,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => const SignInWidget(),
             ),
             FFRoute(
-              name: 'signUp',
-              path: 'signUp',
-              builder: (context, params) => const SignUpWidget(),
-            ),
-            FFRoute(
-              name: 'createProfile',
-              path: 'createProfile',
-              builder: (context, params) => const CreateProfileWidget(),
-            ),
-            FFRoute(
-              name: 'phoneSignIn',
-              path: 'phoneSignIn',
-              builder: (context, params) => const PhoneSignInWidget(),
-            ),
-            FFRoute(
               name: 'forgotPassword',
               path: 'forgotPassword',
               builder: (context, params) => const ForgotPasswordWidget(),
@@ -119,18 +104,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : const HomePageWidget(),
             ),
             FFRoute(
-              name: 'courses',
-              path: 'courses',
-              builder: (context, params) => params.isEmpty
-                  ? const NavBarPage(initialPage: 'courses')
-                  : const CoursesWidget(),
-            ),
-            FFRoute(
               name: 'profilePage',
               path: 'profilePage',
               builder: (context, params) => params.isEmpty
                   ? const NavBarPage(initialPage: 'profilePage')
                   : const ProfilePageWidget(),
+            ),
+            FFRoute(
+              name: 'courses',
+              path: 'courses',
+              builder: (context, params) => params.isEmpty
+                  ? const NavBarPage(initialPage: 'courses')
+                  : const CoursesWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -251,7 +236,6 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
-    List<String>? collectionNamePath,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -269,7 +253,6 @@ class FFParameters {
       param,
       type,
       isList,
-      collectionNamePath: collectionNamePath,
     );
   }
 }
@@ -318,10 +301,10 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: const Color(0xFF121926),
+                  color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/splash_dashboard_02@3x.png',
-                    fit: BoxFit.fitHeight,
+                    'assets/images/e-lection-logo.png',
+                    fit: BoxFit.cover,
                   ),
                 )
               : page;

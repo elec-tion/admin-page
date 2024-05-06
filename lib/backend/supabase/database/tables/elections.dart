@@ -42,4 +42,7 @@ class ElectionsRow extends SupabaseDataRow {
   List<String> get votersWalletId => getListField<String>('voters_wallet_id');
   set votersWalletId(List<String>? value) =>
       setListField<String>('voters_wallet_id', value);
+
+  String? get districtId => getField<String>('district_id');
+  set districtId(String? value) => setField<String>('district_id', value);
 }

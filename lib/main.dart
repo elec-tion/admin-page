@@ -45,8 +45,6 @@ class _MyAppState extends State<MyApp> {
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
 
-  final authUserSub = authenticatedUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
@@ -60,13 +58,6 @@ class _MyAppState extends State<MyApp> {
       const Duration(milliseconds: 1000),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
-  }
-
-  @override
-  void dispose() {
-    authUserSub.cancel();
-
-    super.dispose();
   }
 
   void setLocale(String language) {
@@ -133,8 +124,8 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage': const HomePageWidget(),
-      'courses': const CoursesWidget(),
       'profilePage': const ProfilePageWidget(),
+      'courses': const CoursesWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -171,21 +162,21 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             BottomNavigationBarItem(
               icon: const Icon(
-                Icons.school_outlined,
-                size: 24.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                '8enu9wk8' /* • */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: const Icon(
                 Icons.account_circle_outlined,
                 size: 24.0,
               ),
               label: FFLocalizations.of(context).getText(
                 'nao4zuj3' /* • */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(
+                Icons.school_outlined,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '8enu9wk8' /* • */,
               ),
               tooltip: '',
             )

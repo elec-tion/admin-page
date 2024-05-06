@@ -131,23 +131,6 @@ class _CoursesWidgetState extends State<CoursesWidget>
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  if (responsiveVisibility(
-                    context: context,
-                    tabletLandscape: false,
-                    desktop: false,
-                  ))
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Container(
-                        width: double.infinity,
-                        height: 44.0,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          borderRadius: BorderRadius.circular(0.0),
-                        ),
-                        alignment: const AlignmentDirectional(0.0, 0.0),
-                      ),
-                    ),
                   Align(
                     alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(

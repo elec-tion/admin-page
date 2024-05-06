@@ -1,11 +1,9 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'sign_in_model.dart';
 export 'sign_in_model.dart';
@@ -27,8 +25,8 @@ class _SignInWidgetState extends State<SignInWidget> {
     super.initState();
     _model = createModel(context, () => SignInModel());
 
-    _model.emailAddressTextController ??= TextEditingController();
-    _model.emailAddressFocusNode ??= FocusNode();
+    _model.idTextController ??= TextEditingController();
+    _model.idFocusNode ??= FocusNode();
 
     _model.passwordTextController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
@@ -96,11 +94,24 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     ),
                                   if (Theme.of(context).brightness ==
                                       Brightness.dark)
-                                    Image.asset(
-                                      'assets/images/noCode_UI_onDark@3x.png',
+                                    CachedNetworkImage(
+                                      fadeInDuration:
+                                          const Duration(milliseconds: 500),
+                                      fadeOutDuration:
+                                          const Duration(milliseconds: 500),
+                                      imageUrl:
+                                          'https://images.unsplash.com/photo-1557188969-16b469a5b6c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjBvY2VhbnxlbnwwfHx8fDE3MTQ2NTU0MDN8MA&ixlib=rb-4.0.3&q=80&w=400',
                                       width: 150.0,
                                       height: 40.0,
                                       fit: BoxFit.fitWidth,
+                                      errorWidget:
+                                          (context, error, stackTrace) =>
+                                              Image.asset(
+                                        'assets/images/error_image.png',
+                                        width: 150.0,
+                                        height: 40.0,
+                                        fit: BoxFit.fitWidth,
+                                      ),
                                     ),
                                 ],
                               ),
@@ -153,14 +164,13 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 16.0, 0.0, 0.0),
                                       child: TextFormField(
-                                        controller:
-                                            _model.emailAddressTextController,
-                                        focusNode: _model.emailAddressFocusNode,
+                                        controller: _model.idTextController,
+                                        focusNode: _model.idFocusNode,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
                                               .getText(
-                                            '5goowcap' /* Email Address */,
+                                            '5goowcap' /* ID */,
                                           ),
                                           labelStyle: FlutterFlowTheme.of(
                                                   context)
@@ -179,7 +189,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               ),
                                           hintText: FFLocalizations.of(context)
                                               .getText(
-                                            'sjzomt9g' /* Enter your email here... */,
+                                            'sjzomt9g' /* Enter your ID here... */,
                                           ),
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -254,7 +264,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                                           .bodyMediumFamily),
                                             ),
                                         validator: _model
-                                            .emailAddressTextControllerValidator
+                                            .idTextControllerValidator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -295,7 +305,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                             ),
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'vr644k8h' /* Enter your email here... */,
+                                          'vr644k8h' /* Enter your password here... */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
@@ -439,20 +449,78 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-
-                                      final user =
-                                          await authManager.signInWithEmail(
-                                        context,
-                                        _model.emailAddressTextController.text,
-                                        _model.passwordTextController.text,
+                                      _model.isIDValid =
+                                          await AdminsTable().queryRows(
+                                        queryFn: (q) => q.eq(
+                                          'wallet_id',
+                                          _model.idTextController.text,
+                                        ),
                                       );
-                                      if (user == null) {
-                                        return;
+                                      if (_model.isIDValid != null &&
+                                          (_model.isIDValid)!.isNotEmpty) {
+                                        _model.isPasswordValid =
+                                            await AdminsTable().queryRows(
+                                          queryFn: (q) => q.eq(
+                                            'password',
+                                            _model.passwordTextController.text,
+                                          ),
+                                        );
+                                        if (_model.isPasswordValid != null &&
+                                            (_model.isPasswordValid)!
+                                                .isNotEmpty) {
+                                          context.goNamed(
+                                            'homePage',
+                                            extra: <String, dynamic>{
+                                              kTransitionInfoKey:
+                                                  const TransitionInfo(
+                                                hasTransition: true,
+                                                transitionType:
+                                                    PageTransitionType.fade,
+                                                duration:
+                                                    Duration(milliseconds: 100),
+                                              ),
+                                            },
+                                          );
+                                        } else {
+                                          await showDialog(
+                                            context: context,
+                                            builder: (alertDialogContext) {
+                                              return AlertDialog(
+                                                title: const Text('cırt2'),
+                                                content: const Text('cort'),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () =>
+                                                        Navigator.pop(
+                                                            alertDialogContext),
+                                                    child: const Text('Ok'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        }
+                                      } else {
+                                        await showDialog(
+                                          context: context,
+                                          builder: (alertDialogContext) {
+                                            return AlertDialog(
+                                              title: const Text('cırt1'),
+                                              content: const Text('cort'),
+                                              actions: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Navigator.pop(
+                                                          alertDialogContext),
+                                                  child: const Text('Ok'),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
                                       }
 
-                                      context.goNamedAuth(
-                                          'homePage', context.mounted);
+                                      setState(() {});
                                     },
                                     child: Container(
                                       width: 150.0,
@@ -503,241 +571,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   ),
                                 ],
                               ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 24.0, 0.0, 12.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  AutoSizeText(
-                                    FFLocalizations.of(context).getText(
-                                      'iui8vk35' /* Use a social platform to conti... */,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodySmall
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodySmallFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodySmallFamily),
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: FlutterFlowIconButton(
-                                    borderColor:
-                                        FlutterFlowTheme.of(context).lineColor,
-                                    borderRadius: 12.0,
-                                    borderWidth: 1.0,
-                                    buttonSize: 44.0,
-                                    icon: FaIcon(
-                                      FontAwesomeIcons.google,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      size: 16.0,
-                                    ),
-                                    onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-                                      final user = await authManager
-                                          .signInWithGoogle(context);
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      context.goNamedAuth(
-                                          'homePage', context.mounted);
-                                    },
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: FlutterFlowIconButton(
-                                    borderColor:
-                                        FlutterFlowTheme.of(context).lineColor,
-                                    borderRadius: 12.0,
-                                    borderWidth: 1.0,
-                                    buttonSize: 44.0,
-                                    icon: FaIcon(
-                                      FontAwesomeIcons.apple,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      size: 16.0,
-                                    ),
-                                    onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-                                      final user = await authManager
-                                          .signInWithApple(context);
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      context.goNamedAuth(
-                                          'homePage', context.mounted);
-                                    },
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: FlutterFlowIconButton(
-                                    borderColor:
-                                        FlutterFlowTheme.of(context).lineColor,
-                                    borderRadius: 12.0,
-                                    borderWidth: 1.0,
-                                    buttonSize: 44.0,
-                                    icon: Icon(
-                                      Icons.phone_rounded,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      size: 20.0,
-                                    ),
-                                    onPressed: () async {
-                                      context.pushNamed('phoneSignIn');
-                                    },
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 24.0, 0.0, 24.0),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'signUp',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType:
-                                            PageTransitionType.leftToRight,
-                                        duration: Duration(milliseconds: 400),
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 8.0, 0.0, 8.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'kf187pts' /* Don't have an account? */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMediumFamily,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .bodyMediumFamily),
-                                            ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          8.0, 8.0, 0.0, 8.0),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'y4c79vnl' /* Create Account */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleSmallFamily,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .tertiary,
-                                              letterSpacing: 0.0,
-                                              useGoogleFonts: GoogleFonts
-                                                      .asMap()
-                                                  .containsKey(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmallFamily),
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                FFButtonWidget(
-                                  onPressed: () async {
-                                    GoRouter.of(context).prepareAuthEvent();
-                                    final user = await authManager
-                                        .signInAnonymously(context);
-                                    if (user == null) {
-                                      return;
-                                    }
-
-                                    context.goNamedAuth(
-                                        'homePage', context.mounted);
-                                  },
-                                  text: FFLocalizations.of(context).getText(
-                                    'fjo4dpba' /* Continue as Guest */,
-                                  ),
-                                  options: FFButtonOptions(
-                                    width: 270.0,
-                                    height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color:
-                                        FlutterFlowTheme.of(context).lineColor,
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleMediumFamily,
-                                          letterSpacing: 0.0,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleMediumFamily),
-                                        ),
-                                    elevation: 0.0,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(50.0),
-                                  ),
-                                ),
-                              ],
                             ),
                           ],
                         ),

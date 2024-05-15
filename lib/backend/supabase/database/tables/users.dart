@@ -43,4 +43,10 @@ class UsersRow extends SupabaseDataRow {
   List<String> get districts => getListField<String>('districts');
   set districts(List<String>? value) =>
       setListField<String>('districts', value);
+
+  String get photoUrl => getField<String>('photo_url')!;
+  set photoUrl(String value) => setField<String>('photo_url', value);
+
+  String? get key => getField<String>('key');
+  set key(String? value) => setField<String>('key', value);
 }

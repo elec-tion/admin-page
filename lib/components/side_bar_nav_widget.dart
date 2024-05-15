@@ -89,18 +89,56 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget> {
                 children: [
                   if (Theme.of(context).brightness == Brightness.light)
                     Image.asset(
-                      'assets/images/noCode_UI_onLight@3x.png',
-                      width: 130.0,
-                      height: 40.0,
+                      'assets/images/e-lection-logo-Zenci.PNG',
+                      height: 50.0,
                       fit: BoxFit.fitWidth,
                     ),
                   if (Theme.of(context).brightness == Brightness.dark)
                     Image.asset(
-                      'assets/images/noCode_UI_onDark@3x.png',
-                      width: 130.0,
-                      height: 40.0,
+                      'assets/images/e-lection-logo.png',
+                      height: 50.0,
                       fit: BoxFit.fitWidth,
                     ),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Align(
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'q7wygkj8' /* e-lection */,
+                          ),
+                          textAlign: TextAlign.start,
+                          style: FlutterFlowTheme.of(context)
+                              .displaySmall
+                              .override(
+                                fontFamily: 'Montserrat',
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: GoogleFonts.asMap()
+                                    .containsKey('Montserrat'),
+                              ),
+                        ),
+                      ),
+                      Align(
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '1hozyg75' /* Admin Panel */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodySmall.override(
+                                    fontFamily: 'Montserrat',
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey('Montserrat'),
+                                  ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -223,6 +261,24 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget> {
                       ),
                     ],
                   ),
+                ),
+              ),
+            ),
+            Flexible(
+              child: Align(
+                alignment: const AlignmentDirectional(-1.0, 1.0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    'ozsics5m' /* e-lection 2024. Electronic vot... */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodySmall.override(
+                        fontFamily: 'Montserrat',
+                        fontSize: 9.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w500,
+                        useGoogleFonts:
+                            GoogleFonts.asMap().containsKey('Montserrat'),
+                      ),
                 ),
               ),
             ),

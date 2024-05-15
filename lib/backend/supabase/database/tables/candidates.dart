@@ -19,4 +19,10 @@ class CandidatesRow extends SupabaseDataRow {
 
   String get name => getField<String>('name')!;
   set name(String value) => setField<String>('name', value);
+
+  String? get districtId => getField<String>('district_id');
+  set districtId(String? value) => setField<String>('district_id', value);
+
+  String? get electionId => getField<String>('election_id');
+  set electionId(String? value) => setField<String>('election_id', value);
 }

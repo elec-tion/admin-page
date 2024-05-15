@@ -107,6 +107,14 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // signIn
   {
+    'h2zpfm4p': {
+      'tr': 'e-lection',
+      'en': '',
+    },
+    '3rtakzbk': {
+      'tr': 'Admin Panel',
+      'en': '',
+    },
     '3tuueux4': {
       'tr': 'Welcome Back!',
       'en': '',
@@ -144,6 +152,61 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // forgotPassword
+  {
+    '0li8667y': {
+      'tr': 'Forgot Password',
+      'en': '',
+    },
+    'g30fi9gh': {
+      'tr': 'Forgot Password',
+      'en': '',
+    },
+    'linkhb3l': {
+      'tr':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
+      'en': '',
+    },
+    'bwxk8lim': {
+      'tr': 'Your email',
+      'en': '',
+    },
+    '2z0oiai0': {
+      'tr': 'Enter your email to recieve a linke...',
+      'en': '',
+    },
+    '0ypp9jzq': {
+      'tr': 'Send Reset Link',
+      'en': '',
+    },
+    '15udw37i': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
+  // phoneVerify
+  {
+    'qvfo4iku': {
+      'tr': 'Confirm your Code',
+      'en': '',
+    },
+    'g3z0s5iz': {
+      'tr': 'Confirm your Code',
+      'en': '',
+    },
+    'ysuael9k': {
+      'tr': 'This code helps keep your account safe and secure.',
+      'en': '',
+    },
+    'yc9rm3xe': {
+      'tr': 'Confirm & Continue',
+      'en': '',
+    },
+    'kpke021w': {
+      'tr': 'Home',
+      'en': '',
+    },
+  },
   // homePage
   {
     '2th408k2': {
@@ -171,7 +234,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'yzb0bx6c': {
-      'tr': '31',
+      'tr': 'x',
       'en': '',
     },
     'fbspwxn5': {
@@ -211,6 +274,61 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'er4lh3yy': {
+      'tr': '•',
+      'en': '',
+    },
+  },
+  // profilePage
+  {
+    'gvic0agz': {
+      'tr': 'Profile',
+      'en': '',
+    },
+    '2za7cp4i': {
+      'tr': 'Below you will find a summary of your courses',
+      'en': '',
+    },
+    'b91u5zvh': {
+      'tr': 'Edit',
+      'en': '',
+    },
+    'ofirytgk': {
+      'tr': 'Account',
+      'en': '',
+    },
+    '0ugpk174': {
+      'tr': 'Switch to Dark Mode',
+      'en': '',
+    },
+    'mztuxvdc': {
+      'tr': 'Switch to Light Mode',
+      'en': '',
+    },
+    'c0rehy65': {
+      'tr': 'Country',
+      'en': '',
+    },
+    'ypjboksd': {
+      'tr': 'Edit Profile',
+      'en': '',
+    },
+    'sbupgj5y': {
+      'tr': 'General',
+      'en': '',
+    },
+    'c53qb9y4': {
+      'tr': 'Support',
+      'en': '',
+    },
+    'gim7t1nl': {
+      'tr': 'Terms of Service',
+      'en': '',
+    },
+    'ia75xbtp': {
+      'tr': 'Invite Friends',
+      'en': '',
+    },
+    'nao4zuj3': {
       'tr': '•',
       'en': '',
     },
@@ -311,6 +429,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // sideBarNav
   {
+    'q7wygkj8': {
+      'tr': 'e-lection',
+      'en': '',
+    },
+    '1hozyg75': {
+      'tr': 'Admin Panel',
+      'en': '',
+    },
     'mygsiguk': {
       'tr': 'Menu',
       'en': '',
@@ -325,6 +451,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hwpwn78q': {
       'tr': 'Users',
+      'en': '',
+    },
+    'ozsics5m': {
+      'tr': 'e-lection 2024. Electronic voting solutions',
       'en': '',
     },
   },

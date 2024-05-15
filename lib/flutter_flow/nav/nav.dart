@@ -87,11 +87,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => const SignInWidget(),
             ),
             FFRoute(
+              name: 'forgotPassword',
+              path: 'forgotPassword',
+              builder: (context, params) => const ForgotPasswordWidget(),
+            ),
+            FFRoute(
+              name: 'phoneVerify',
+              path: 'phoneVerify',
+              builder: (context, params) => const PhoneVerifyWidget(),
+            ),
+            FFRoute(
               name: 'homePage',
               path: 'homePage',
               builder: (context, params) => params.isEmpty
                   ? const NavBarPage(initialPage: 'homePage')
                   : const HomePageWidget(),
+            ),
+            FFRoute(
+              name: 'profilePage',
+              path: 'profilePage',
+              builder: (context, params) => params.isEmpty
+                  ? const NavBarPage(initialPage: 'profilePage')
+                  : const ProfilePageWidget(),
             ),
             FFRoute(
               name: 'elections',
@@ -290,13 +307,19 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Container(
-                  color: Colors.transparent,
-                  child: Image.asset(
-                    'assets/images/e-lection-logo.png',
-                    fit: BoxFit.cover,
-                  ),
-                )
+              ? isWeb
+                  ? Container()
+                  : Container(
+                      color: Colors.transparent,
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/e-lection-logo.png',
+                          width: 100.0,
+                          height: 100.0,
+                          fit: BoxFit.scaleDown,
+                        ),
+                      ),
+                    )
               : page;
 
           final transitionInfo = state.transitionInfo;
@@ -360,4 +383,14 @@ class RootPageContext {
         value: RootPageContext(true, errorRoute),
         child: child,
       );
+}
+
+extension GoRouterLocationExtension on GoRouter {
+  String getCurrentLocation() {
+    final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
+    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
+        ? lastMatch.matches
+        : routerDelegate.currentConfiguration;
+    return matchList.uri.toString();
+  }
 }

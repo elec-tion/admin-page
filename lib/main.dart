@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
       ..listen((user) => _appStateNotifier.update(user));
     jwtTokenStream.listen((_) {});
     Future.delayed(
-      const Duration(milliseconds: 1000),
+      Duration(milliseconds: isWeb ? 0 : 1000),
       () => _appStateNotifier.stopShowingSplashImage(),
     );
   }
@@ -124,6 +124,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'homePage': const HomePageWidget(),
+      'profilePage': const ProfilePageWidget(),
       'elections': const ElectionsWidget(),
       'users': const UsersWidget(),
     };
@@ -157,6 +158,16 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 'er4lh3yy' /* • */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(
+                Icons.account_circle_outlined,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'nao4zuj3' /* • */,
               ),
               tooltip: '',
             ),

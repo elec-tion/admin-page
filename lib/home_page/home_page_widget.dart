@@ -1284,7 +1284,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'yzb0bx6c' /* 31 */,
+                                                                'yzb0bx6c' /* x */,
                                                               ),
                                                               textAlign:
                                                                   TextAlign
